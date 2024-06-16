@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - YourPharmacy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/productspage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container flex-container">
+                <div class="navbar-items">
+                    <ul class="navbar-nav">
+                        <li><a href="Pharmacy.html">Home</a></li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Products 
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="skincare.html">Skin care</a>
+                                <a href="antibiotics.html">Antibiotics</a>
+                                <a href="babycare.html">Baby Care</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">LogIn 
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="">LogIn</a>
+                                <a href="">SignUp</a>
+                                
+                            </div>
+                        </div>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="right-nav">
+                    <button class="login-btn" onclick="showLoginForm()"><i class="fa fa-user"></i></button>
+                    <button class="search-toggler" onclick="toggleSearch()"><i class="fa fa-search"></i></button>
+                    <div class="search-container hidden">
+                        <input type="text" placeholder="Search products..." id="search-input">
+                        <button onclick="searchProducts()">Search</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cards">
+        <section class="product-listing">
+            <h2>Skin Care Products</h2>
+            <div class="product-grid" id="skin-care-products-grid">
+            </div>
+
+            <h2>Antibiotics Products</h2>
+            <div class="product-grid" id="antibiotics-products-grid">
+            </div>
+
+            <h2>Baby Care Products</h2>
+            <div class="product-grid" id="babycare-products-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Your Pharmacy. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                //  skin care products
+                let response = await fetch('/api/featured-products?category=Skin care');
+                let products = await response.json();
+                let productGrid = document.getElementById('skin-care-products-grid');
+
+                products.forEach(product => {
+                    let productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+
+                    productCard.innerHTML = `
+                        <a href="product.html?id=${product._id}">
+                            <img src="${product.imageUrl}" alt="${product.name}">
+                            <hr>
+                            <h3>${product.name}</h3>
+                            <hr>
+                            <p>${product.description}</p>
+                            <div class="product-info">
+                                <span class="product-price">$${product.price.toFixed(2)}</span>
+                                <div class="product-actions">
+                                    <button><i class="fa fa-shopping-cart"></i></button>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    `;
+
+                    productGrid.appendChild(productCard);
+                });
+
+                //  antibiotics products
+                response = await fetch('/api/featured-products?category=Antibiotics');
+                products = await response.json();
+                productGrid = document.getElementById('antibiotics-products-grid');
+
+                products.forEach(product => {
+                    let productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+
+                    productCard.innerHTML = `
+                        <a href="product.html?id=${product._id}">
+                            <img src="${product.imageUrl}" alt="${product.name}">
+                            <hr>
+                            <h3>${product.name}</h3>
+                            <hr>
+                            <p>${product.description}</p>
+                            <div class="product-info">
+                                <span class="product-price">$${product.price.toFixed(2)}</span>
+                                <div class="product-actions">
+                                    <button><i class="fa fa-shopping-cart"></i></button>
+                                    <button><i class="fa fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+
+                    productGrid.appendChild(productCard);
+                });
+
+                //  baby care products
+                response = await fetch('/api/featured-products?category=Babycare');
+                products = await response.json();
+                productGrid = document.getElementById('babycare-products-grid');
+
+                products.forEach(product => {
+                    let productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+
+                    productCard.innerHTML = `
+                        <a href="product.html?id=${product._id}">
+                            <img src="${product.imageUrl}" alt="${product.name}">
+                            <hr>
+                            <h3>${product.name}</h3>
+                            <hr>
+                            <p>${product.description}</p>
+                            <div class="product-info">
+                                <span class="product-price">$${product.price.toFixed(2)}</span>
+                                <div class="product-actions">
+                                    <button><i class="fa fa-shopping-cart"></i></button>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                    `;
+
+                    productGrid.appendChild(productCard);
+                });
+            } catch (error) {
+                console.error('Error fetching products:', error);
+            }
+        });
+    </script>
+</body>
+</html>

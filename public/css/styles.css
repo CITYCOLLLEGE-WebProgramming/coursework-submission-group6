@@ -1,0 +1,462 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    
+    }
+
+    
+
+
+ footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*-------------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------------------------------*/
+.product-listing h2 {
+    text-align: center;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; 
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.product-card button {
+    background-color: #A0DEFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; 
+}
+
+.product-card button:hover {
+    background-color: #3790ba;
+}
+
+/* New styles for additional features */
+.product-card hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.product-card .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-card .product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-card .product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.product-card .product-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 20px;
+    color: #666;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.product-card .product-actions button:hover {
+    color: black;
+    opacity: 1;
+}
+
+
+
+
+/**  ------------------------Main Page 3 PICTURES -------------------------------        **/
+.first-body {
+    margin-top: 550px;
+    background-color: #6d9096;
+}
+
+.skincare-text {
+    width: 60%;
+    float: left;
+    padding-left: 0px;
+    margin-top: 100px;
+    justify-content: left;
+    text-align: left;
+}
+
+.skincare-text h1 {
+    font-size: 48px;
+    position: relative;
+    color: aliceblue;
+    margin-top: 0px;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 200px;
+}
+
+.skincare-text p {
+    font-size: 19px;
+    margin: 30px 30px 30px 0;
+    letter-spacing: 1px;
+    color:aliceblue;
+    padding-left: 200px;
+    text-align: left;
+}
+
+.btn-skin {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-left: 200px;
+    
+}
+
+.btn-skin .exp-skin {
+    cursor: pointer;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 32px;
+    background-color: #c06666;
+    padding: 15px 50px;
+}
+
+
+.skincare-image {
+    width: 300px;
+    height: 430px;
+    margin: 100px;
+    margin-left: 1200px;
+}
+
+.second-body {
+    margin-top:0px;
+    background-color: #eac2b6;
+    height: 430px;
+}
+
+.haircare-text {
+    width: 60%;
+    float: right;
+    padding-right: 0px;
+    margin-top: 100px;
+    justify-content: right;
+    text-align: right;
+}
+
+.haircare-text h1 {
+    font-size: 48px;
+    position: relative;
+    color: aliceblue;
+    margin-top: 0px;
+    font-weight: 700;
+    line-height: 1;
+    margin-right: 233px;
+    text-align: right;
+}
+
+.haircare-text p {
+    font-size: 19px;
+    margin: 30px 30px 30px 0;
+    letter-spacing: 1px;
+    color: #2b3957;
+    padding-right: 200px;
+    text-align: right;
+}
+
+.btn-hair {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-left: 480px;
+}
+
+.btn-hair .exp-hair {
+    cursor: pointer;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 32px;
+    background-color: #2b3957;
+    padding: 15px 50px;
+}
+
+.haircare-image{
+    margin-left: 100px;
+}
+
+.third-body{
+    margin-top:100px;
+    background-color: #aed2b5;
+    height: 430px;
+}
+
+.dentalcare-text {
+    width: 60%;
+    float: left;
+    padding-right: 0px;
+    margin-top: 100px;
+    justify-content: left;
+    text-align: left;
+}
+
+.dentalcare-text h1 {
+    font-size: 48px;
+    position: relative;
+    color: aliceblue;
+    margin-top: 0px;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 200px;
+}
+
+.dentalcare-text p {
+    font-size: 19px;
+    margin: 30px 30px 30px 0;
+    letter-spacing: 1px;
+    color:aliceblue;
+    padding-left: 200px;
+    text-align: left;
+}
+
+.btn-dental {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-left: 200px;
+}
+
+.btn-dental .exp-dental {
+    cursor: pointer;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 32px;
+    background-color: #6d9096;
+    padding: 15px 50px;
+}
+
+.banner {
+    width: 80%;
+    height: 70%;
+     position: absolute; 
+     top: 5%; 
+    left: 150px;
+    color: #fff; 
+}
+
+.general-text {
+    width: 60%;
+    float: left;
+    padding-left: 50px;
+}
+
+.general-text h3 {
+    margin-top: 150px;
+    font-size: 17px;
+    color: #2b3957;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.general-text h1{
+    font-size: 51px;
+    position: relative;
+    color: #c06666;
+    margin-top: 30px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.general-text p {
+    font-size: 19px;
+    margin: 30px 30px 30px 0;
+    letter-spacing: 1px;
+    color:#c06666;
+    padding-right: 250px;
+}
+
+.btn-group {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.btn-group .explore-btn {
+    cursor: pointer;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 32px;
+    background-color: #2b3957;
+    padding: 15px 50px;
+}
+
+.explore-btn #firstbody:hover {
+    color: #c06666;
+}
+
+.explore-btn::before {
+    color: aliceblue;
+}
+
+.explore-btn::after {
+    color: aliceblue;
+}
+
+.explore-btn :visited {
+    color: aliceblue;
+}
+
+.explore-btn #firstbody {
+    color: aliceblue;
+}
+
+.slider {
+    width: 650px;
+    height: 400px;
+    background: url(cerave.jng);
+    margin: 150px;
+    animation: slide 20s infinite;
+    align-content: right;
+    margin-left: 550px;
+}
+
+@keyframes slide {
+    2% {
+        background: url(cerave.jpg);
+    }
+    25% {
+        background: url(CellFrame_n.jpg);
+    }
+    50% {
+        background: url(eucerFrame.jpg);
+    }
+    75% {
+        background: url(la\ rochey.jpg);
+    }
+    100% {
+        background: url(avene.jpg);
+    }
+}
+
+
+
+/* Button Hover Effects */
+.btn-skin .exp-skin, .btn-hair .exp-hair, .btn-dental .exp-dental, .explore-btn a {
+    cursor: pointer;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 32px;
+    background-color: #c06666;
+    padding: 15px 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-decoration: none; 
+    outline: none; 
+}
+
+.btn-skin .exp-skin:hover, .btn-hair .exp-hair:hover, .btn-dental .exp-dental:hover, .explore-btn a:hover {
+    color: #fff;
+    background-color: #3790ba;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-skin .exp-skin:focus, .btn-hair .exp-hair:focus, .btn-dental .exp-dental:focus, .explore-btn a:focus {
+    color: #fff;
+    background-color: #3790ba;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.btn-skin .exp-skin::before, .btn-hair .exp-hair::before, .btn-dental .exp-dental::before, .explore-btn a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.75s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.btn-skin .exp-skin:hover::before, .btn-hair .exp-hair:hover::before, .btn-dental .exp-dental:hover::before, .explore-btn a:hover::before,
+.btn-skin .exp-skin:focus::before, .btn-hair .exp-hair:focus::before, .btn-dental .exp-dental:focus::before, .explore-btn a:focus::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-skin .exp-skin span, .btn-hair .exp-hair span, .btn-dental .exp-dental span, .explore-btn a span {
+    position: relative;
+    z-index: 1;
+}

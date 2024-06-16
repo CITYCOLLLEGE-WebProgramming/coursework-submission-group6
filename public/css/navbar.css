@@ -1,0 +1,170 @@
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    border: 1px solid #343a40;
+    padding-top: 2%;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensure the navbar is in front */
+    position: relative;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav li {
+    padding: 0 20px;
+}
+
+.navbar-nav a {
+    color: #2c2929;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    opacity: 1 !important;
+    color: black !important;
+}
+
+.dropdown .dropbtn {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #2c2929;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.dropdown .dropbtn:hover {
+    opacity: 1;
+    color: black;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    display: none;
+}
+
+.search-toggler, .login-btn {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #2c2929;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.search-toggler:hover, .login-btn:hover {
+    opacity: 1;
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+.search-container input {
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn:hover {
+    opacity: 1;
+    color: black;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #333;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure dropdown is in front */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    opacity: 1 !important;
+    color: black !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a, .dropdown .dropbtn {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content {
+        position: relative;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); /* Poppins Font */
